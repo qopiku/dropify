@@ -314,6 +314,7 @@ Dropify.prototype.cleanFilename = function(src)
     var filename = src.split('\\').pop();
     if (filename == src) {
         filename = src.split('/').pop();
+        filename = filename.split('?').shift();
     }
 
     return src !== "" ? filename : '';
